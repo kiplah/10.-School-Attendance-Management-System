@@ -46,3 +46,9 @@ def visualize_attendance(percentages):
     plt.tight_layout()
     plt.show()
 
+# Main program execution
+attendance_data = input_attendance()
+percentages = calculate_attendance_percentage(attendance_data)
+display_attendance_percentages(percentages)
+visualize_attendance(percentages)
+
