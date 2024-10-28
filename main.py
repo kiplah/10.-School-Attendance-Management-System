@@ -26,3 +26,9 @@ def calculate_attendance_percentage(attendance_data):
         percentages[student] = (present_days / total_days) * 100 if total_days > 0 else 0
     return percentages
 
+# Function to display attendance percentages
+def display_attendance_percentages(percentages):
+    print("\nAttendance Percentages:")
+    for student, percent in percentages.items():
+        print(f"{student}: {percent:.2f}%")
+
