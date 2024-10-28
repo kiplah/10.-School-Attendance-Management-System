@@ -17,3 +17,12 @@ def input_attendance():
         attendance_data[name].append((date, status))
     return attendance_data
 
+# Function to calculate attendance percentage for each student
+def calculate_attendance_percentage(attendance_data):
+    percentages = {}
+    for student, records in attendance_data.items():
+        total_days = len(records)
+        present_days = sum(1 for _, status in records if status == 'present')
+        percentages[student] = (present_days / total_days) * 100 if total_days > 0 else 0
+    return percentages
+
