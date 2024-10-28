@@ -32,3 +32,17 @@ def display_attendance_percentages(percentages):
     for student, percent in percentages.items():
         print(f"{student}: {percent:.2f}%")
 
+# Function to visualize attendance as a bar chart
+def visualize_attendance(percentages):
+    students = list(percentages.keys())
+    attendance_rates = list(percentages.values())
+    
+    plt.figure(figsize=(10, 6))
+    plt.bar(students, attendance_rates, color='skyblue')
+    plt.xlabel("Students")
+    plt.ylabel("Attendance Percentage")
+    plt.title("Attendance Percentage per Student")
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.show()
+
